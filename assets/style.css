@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* colors */
+  --purple: #9356DC;
+  --dark-blue: #003A68;
+  --light-blue: #89C8FA;
+  --dark-green: #008766;
+  --light-green: #99E2D0;
+  --light-grey: #F3F3F3;
+  --white: #FFFFFF;
+}
+
+:root {
+  /* font-family */
+  --body-font: "Roboto";
+  --section-title-font: "Roboto";
+  --button-font: "Roboto";
+  --header-font: "Shrikhand";
+  --menu-title-font: "Shrikhand";
+  --footer-title-font: "Shrikhand";
+  /* font-weight */
+  --body-font-weight: 300;
+  --title-font-weight: 700;
+  --plate-title-font-weight: 500;
+  --button-font-weight: 500;
+  --header-font-weight: 400;
+  --menu-title-font-weight: 400;
+  --footer-title-font-weight: 400;
+  --footer-font-weight: 500;
+  /* font-size */
+  --header-title-font-size: 1.88rem;
+  --menu-title-font-size: 1.75rem;
+  --section-title-font-size: 1.5rem;
+  --body-highlight-font-size: 1.13rem;
+  --details-font-size: 1.06rem;
+  --body-font-size: 1rem;
+  --details-font-size: 0.94rem;
+}
+
+body {
+  background-color: var(--white);
+}
+
+/*# sourceMappingURL=style.css.map */
