@@ -7,35 +7,37 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header class="">
-        <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo du site Oh my food">
+    <header class="header">
+        <img class="header__logo" src="assets/images/logo/ohmyfood@2x.svg" alt="logo du site Oh my food">
     </header>
     <main>
         <section class="location">
-            <img src="assets/images/icon/Pin.svg" alt="icon de localisation">
-            <p>Paris, Belleville</p>
+            <img class="location__logo" src="assets/images/icon/Pin.svg" alt="icon de localisation">
+            <p class="location__text">Paris, Belleville</p>
         </section>
         <section class="discover">
-            <h1>Réserver le menu qui vous convient</h1>
-            <p>Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <h1 class="discover__title">Réserver le menu qui vous convient</h1>
+            <p class="discover__text">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
+            <div>
+                <a href="" class="discover__button">Explorer nos restaurants</a>
+            </div>
         </section>
         <section class="process">
-            <h2>Fonctionnement</h2>
+            <h2 class="process__title">Fonctionnement</h2>
             <div>
                 <ol>
                     <li>
-                        <p>1</p>
+                        <span>1</span>
                         <img src="assets/images/icon/mobile-screen-button.svg" alt="icon d'un téléphone portable">
                         <p>Choisissez un restaurant</p>
                     </li>
                     <li>
-                        <p>2</p>
+                        <span>2</span>
                         <img src="assets/images/icon/list-ul.svg" alt="icon qui représente une liste">
                         <p>Composer votre menu</p>
                     </li>
                     <li>
-                        <p>3</p>
+                        <span>3</span>
                         <img src="assets/images/icon/store.svg" alt="icon qui représente une boutique">
                         <p>Dégustez au restaurant</p>
                     </li>
@@ -44,60 +46,84 @@
         </section>
         <section class="restaurants">
             <h2>Restaurants</h2>
+            <div class="restaurants__cards">
                 <a href="restaurants/menu-palette-du-gout.html">
-                    <article>
+                    <article class="card">
                         <div>
+                            <p class="new">Nouveau</p>
                             <img src="assets/images/restaurants/jay-wennington.jpg" alt="photographie d'une assiette d'un menu du restaurant La palette du goût">
-                            <p>Nouveau</p>
                         </div>
-                        <div>
-                            <div>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                        <div class="card-content">
+                            <div class="card-content__text">
+                                <h3 class="card-content__text--title">La palette du goût</h3>
+                                <p class="card-content__text--subtitle">Ménilmontant</p>
                             </div>
-                            <div>
-                                (logo heart)
+                            <div class="card-content__heart">
+                                <img src="assets/images/icon/Vector.svg" alt="icon d'un coeur à liker">
                             </div>
                         </div>
                     </article>
                 </a>
                 <a href="restaurants/menu-note-enchantee.html">
-                    <article>
-                        <img src="assets/images/restaurants/menu-view.jpg" alt="photographie d'une assiette d'un menu du restaurant La note enchantée">
+                    <article class="card">
                         <div>
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p>
+                            <p class="new">Nouveau</p>
+                            <img src="assets/images/restaurants/menu-view.jpg" alt="photographie d'une assiette d'un menu du restaurant La note enchantée">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content__text">
+                                <h3 class="card-content__text--title">La note enchantée</h3>
+                                <p class="card-content__text--subtitle">Charonne</p>
+                            </div>
+                            <div class="card-content__heart">
+                                <img src="assets/images/icon/Vector.svg" alt="icon d'un coeur à liker">
+                            </div>
                         </div>
                     </article>
                 </a>
                 <a href="restaurants/menu-a-la-francaise.html">
-                    <article>
-                        <img src="assets/images/restaurants/toa-heftiba.jpg" alt="photographie d'une assiette d'un menu du restaurant A la française">
+                    <article class="card">
                         <div>
-                            <h3>A la française</h3>
-                            <p>Cité Rouge</p>
+                            <img src="assets/images/restaurants/toa-heftiba.jpg" alt="photographie d'une assiette d'un menu du restaurant A la française">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content__text">
+                                <h3 class="card-content__text--title">A la française</h3>
+                                <p class="card-content__text--subtitle">Cité rouge</p>
+                            </div>
+                            <div class="card-content__heart">
+                                <img src="assets/images/icon/Vector.svg" alt="icon d'un coeur à liker">
+                            </div>
                         </div>
                     </article>
                 </a>
                 <a href="restaurants/menu-delice-des-sens.html">
-                    <article>
-                        <img src="assets/images/restaurants/louis-hansel.jpg" alt="photographie d'une assiette d'un menu du restaurant Le délice des sens">
+                    <article class="card">
                         <div>
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p>
+                            <img src="assets/images/restaurants/louis-hansel.jpg" alt="photographie d'une assiette d'un menu du restaurant Le délice des sens">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-content__text">
+                                <h3 class="card-content__text--title">Le délice des sens</h3>
+                                <p class="card-content__text--subtitle">Folie-Méricourt</p>
+                            </div>
+                            <div class="card-content__heart">
+                                <img src="assets/images/icon/Vector.svg" alt="icon d'un coeur à liker">
+                            </div>
                         </div>
                     </article>
                 </a>
+            </div>
         </section>
     </main>
-    <footer>
-        <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+    <footer class="footer">
+        <h4 class="footer__title">ohmyfood</h4>
         <ul>
-            <li>
+            <li class="footer__list-1">
                 <img src="assets/images/icon/fork-icon.svg" alt="icon qui représente une fourchette">
                 <p>Proposer un restaurant</p>
             </li>
-            <li>
+            <li class="footer__list-2">
                 <img src="assets/images/icon/handshake-icon.svg" alt="icon poignée de mains">
                 <p>Devenir partenaire</p>
             </li>
