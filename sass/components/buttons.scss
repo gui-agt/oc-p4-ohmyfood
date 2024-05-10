@@ -1,7 +1,7 @@
 @mixin cta-btn-main {
     line-height: 1.5rem;
     padding: 0.81rem 1.4rem;
-    background: linear-gradient(0deg, #9356DC 1%, #FF79DA 99%);
+    background: linear-gradient(0deg, var(--purple) 1%, var(--pink) 99%);
     color: var(--white);
     font-family: var(--button-font);
     font-weight: var(--button-font-weight);

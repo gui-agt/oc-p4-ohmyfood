@@ -3,6 +3,7 @@
 @import "libs/color.scss";
 @import "libs/text-config.scss";
 @import "components/buttons.scss";
+@import "components/header.scss";
 
 body {
     background-color: var(--white);
@@ -11,18 +12,26 @@ body {
 /* header */
 
 .header {
+    @include global-header;
+}
+
+/* header old version 
+
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 3.94rem;
     box-shadow: 0 2px 4px #00000026;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     &__logo {
         width: 10.125rem;
         height: 2.75rem;
     }
 }
+
+*/
 
 /* location */
 
@@ -34,6 +43,8 @@ body {
     gap: 1.06rem;
     background-color: var(--dark-grey);
     box-shadow: 0 4px 4px #00000025;
+    position: relative;
+    z-index: 1;
     &__logo {
         width: 0.75rem;
         height: 1rem;
@@ -50,6 +61,8 @@ body {
 .discover {
     background-color: var(--light-grey);
     padding: 2.44rem 0 3.56rem 0;
+    position: relative;
+    z-index: 0;
     &__title {
         height: 4.25rem;
         font-family: var(--section-title-font);
@@ -87,44 +100,48 @@ body {
     padding: 50px 20px 40px 20px;
 }
 
-h2 {
+.process__title {
     font-family: var(--section-title-font);
     font-weight: var(--title-font-weight);
     font-size: var(--section-title-font-size);
 }
 
-ol {
+.process__list {
     display: flex;
     flex-direction: column;
     padding: 25px 0;
     list-style-type: none;
     gap: 25px;
-}
-
-ol li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-    background-color: var(--light-grey);
-    box-shadow: 0 4px 15px #00000015;
-    border-radius: 20px;
-    padding: 28px 0;
-    font-family: var(--body-font);
-    font-weight: var(--button-font-weight);
-    font-size: var(--body-font-size);
-    span {
+    li {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: var(--white);
-        background-color: var(--purple);
-        width: 24px;
-        height: 24px;
-        font-size: 14px;
+        gap: 25px;
+        background-color: var(--light-grey);
+        box-shadow: 0 4px 15px #00000015;
+        border-radius: 20px;
+        padding: 28px 0;
+        margin-left: 12px;
+        font-family: var(--body-font);
+        font-weight: var(--button-font-weight);
+        font-size: var(--body-font-size);
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-left: -12px;
+            color: var(--white);
+            background-color: var(--purple);
+            width: 24px;
+            height: 24px;
+            font-size: 14px;
+        }
     }
 }
+
+
+
 
 /* restaurants list */
 
@@ -147,9 +164,29 @@ a {
     height: 250px;
     border-radius: 15px;
     background-color: var(--white);
+    position: relative;
+    &__new {
+        z-index: 1;
+        position: absolute;
+        right: 15px;
+        top: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #008766;
+        font-size: 14px;
+        font-weight: var(--button-font-weight);
+        font-family: var(--body-font);
+        text-decoration: none;
+        background-color: #99E2D0;
+        width: 80px;
+        height: 29px;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px #00000015;
+    }
 }
 
-article img {
+.card img {
     position: relative;
     object-fit: cover;
     height: 175px;
@@ -157,29 +194,7 @@ article img {
     border-radius: 15px 15px 0 0;
 }
 
-.new {
-    z-index: 1;
-    position: absolute;
-    right: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #008766;
-    font-size: 14px;
-    font-weight: var(--button-font-weight);
-    font-family: var(--body-font);
-    text-decoration: none;
-    background-color: #99E2D0;
-    width: 80px;
-    height: 29px;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px #00000015;
-}
 
-.card-content__heart img {
-    width: 22px;
-    height: 21px;
-}
 
 .card-content {
     display: flex;
@@ -187,7 +202,7 @@ article img {
     justify-content: space-between;
     align-items: center;
     height: 67px;
-    padding: 0 33px 0 15px;
+    padding: 0 25px 0 15px;
     &__text {
         display: flex;
         flex-direction: column;
@@ -204,6 +219,11 @@ article img {
             font-size: var(--details-font-size);
             color: black;
         }
+    }
+    &__heart {
+        width: 22px;
+        height: 21px;
+        color: black;
     }
 }
 
@@ -231,7 +251,7 @@ article img {
     }
     &__list-2 {
         display: flex;
-        gap: 11px;
+        gap: 9px;
         align-items: center;
         img {
             width: 12px;
@@ -240,11 +260,119 @@ article img {
     }
 }
 
-ul li {
+.footer {
+    ul li {
     list-style-type: none;
     font-family: var(--body-font);
     font-weight: var(--footer-font-weight);
     font-size: var(--body-font-size);
     line-height: 19px;
     padding: 4px;
+    }
 }
+
+/* Restaurant page */
+
+.main-container {
+    background-color: var(--light-grey);
+}
+
+.restaurant-hero-banner {
+    position: relative;
+    z-index: 0;
+    & img {
+        object-fit: cover;
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
+.restaurant-menu-page {
+    background-color: var(--light-grey);
+    border-radius: 40px 40px 0 0;
+    padding-top: 32px;
+    position: relative;
+    z-index: 1;
+    margin-top: -32px;
+    &__title-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 340px;
+        padding: 0 17px;
+    }
+    &__title {
+        font-family: var(--menu-title-font);
+        font-weight: var(--menu-title-font-weight);
+        font-size: var(--menu-title-font-size);
+    }
+    &__heart-icon {
+        padding-right: 24px;
+    }
+}
+
+.plate-type {
+    padding: 0 13px;
+    &__name {
+        font-family: var(--section-title-font);
+        font-weight: var(--body-font-weight);
+        font-size: var(--body-font-size);
+        height: 27px;
+        margin-bottom: 12px;
+        padding-top: 40px;
+        border-bottom: 3px solid var(--light-green);
+        width: 40px;
+
+    }
+}
+
+.plate-card {
+    background-color: var(--white);
+    padding: 13.5px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4.01px 15.04px 0 #00000010;
+    margin-top: 12px;
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(--black);
+    }
+}
+
+.plate-card-menu {
+    &__title {
+        font-family: var(--body-font);
+        font-weight: var(--plate-title-font-weight);
+        font-size: var(--body-highlight-font-size);
+        line-height: 21px;
+        margin-bottom: 5px;;
+    }
+    &__details {
+        font-family: var(--body-font);
+        font-weight: var(--body-font-weight);
+        font-size: var(--details-font-size);
+        line-height: 18px;
+    }
+}
+
+.plate-card-price {
+    font-family: var(--body-font);
+    font-weight: var(--title-font-weight);
+    font-size: var(--details-font-size);
+    display: flex;
+    align-items: end;
+}
+
+.restaurant-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    &__button {
+        @include cta-btn-main;
+    }
+}
+

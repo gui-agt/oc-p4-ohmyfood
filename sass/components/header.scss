@@ -1,0 +1,27 @@
+
+@mixin global-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 63px;
+    box-shadow: 0 2px 4px #00000026;
+    position: relative;
+    z-index: 2;
+    &__left-arrow {
+        position: absolute;
+        padding: 7px;
+        left: 16px;
+        top: 17px;
+        width: 17.2px;
+        height: 16px;
+        color: black;
+    }
+    &__left-arrow--hidden {
+        display: none;
+    }
+    &__logo {
+        width: 162px;
+        height: 44px;
+    }
+}
