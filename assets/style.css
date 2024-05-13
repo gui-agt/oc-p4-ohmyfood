@@ -358,7 +358,7 @@ a {
   object-fit: cover;
   width: 100%;
   vertical-align: top;
-  max-height: 383px;
+  max-height: 275px;
 }
 
 .restaurant-menu-page {
@@ -544,6 +544,9 @@ a {
   }
 }
 @media screen and (min-width: 1024px) {
+  .restaurant-hero-banner img {
+    max-height: 383px;
+  }
   .restaurant-menu-page-and-order-wrapper {
     max-width: 1055px;
     margin: auto;
