@@ -140,6 +140,13 @@ body {
     }
 }
 
+/* for media queries 425px to 1023px */
+
+.process__list--centered {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
 
 /* restaurants list */
 
@@ -258,6 +265,9 @@ a {
             width: 12px;
             height: 13px;
         }
+    }
+    &__contact-link {
+        color: var(--white);
     }
 }
 
@@ -381,7 +391,23 @@ a {
 
 /* Responsive Design */
 
+@media screen and (min-width: 425px) and (max-width: 1023px) {
+    .process__list {
+        li {
+            gap: 0px;
+        }
+        &--centered {
+            margin: 0 auto;
+        }
+    }
+}
 
+@media screen and (min-width: 580px) and (max-width: 1023px) {
+    .process, .restaurants-wrapper {
+        max-width: 580px;
+        margin: auto;
+    }
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -490,3 +516,5 @@ a {
         padding-top: 51px;
     }
 }
+
+/* loader */
