@@ -579,17 +579,17 @@ a {
     padding-top: 51px;
   }
 }
-/* loader animation */
+/* loader animation 
+
 .loader-container-display {
-  animation: DisplayNone 3s;
+    animation: DisplayNone 3s;
 }
 
 @keyframes DisplayNone {
-  100% {
-    display: none;
-  }
+    100% {
+        display: none;
+    }
 }
-/*
 
 .loader-container {
     position: fixed;
