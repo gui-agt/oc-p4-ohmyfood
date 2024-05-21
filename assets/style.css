@@ -552,8 +552,8 @@ a {
   border-radius: 15px;
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.062745098);
   margin-top: 12px;
-  position: relative;
   overflow: hidden;
+  position: relative;
   cursor: pointer;
   /*
   a {
