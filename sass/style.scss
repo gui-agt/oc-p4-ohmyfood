@@ -4,6 +4,7 @@
 @import "libs/text-config.scss";
 @import "components/buttons.scss";
 @import "components/header.scss";
+@import "libs/animations.scss";
 
 body {
     background-color: var(--white);
@@ -228,12 +229,38 @@ a {
             color: black;
         }
     }
+/*
     &__heart {
-        width: 22px;
-        height: 21px;
+        font-size: var(--section-title-font-size);
         color: black;
+        cursor: pointer;
     }
+    */
 }
+
+.heart-wrapper {
+    &__heart {
+        position: absolute;
+        font-size: var(--section-title-font-size);
+        color: black;
+        cursor: pointer;
+        &--filled {
+            position: relative;
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 1s;
+            &:hover {
+                opacity: 1;
+                color: transparent;
+                background-image: linear-gradient(0deg, var(--pink), var(--purple));
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        }
+    } 
+}
+
+
 
 /* footer */
 
@@ -341,40 +368,105 @@ a {
 
 .plate-card {
     background-color: var(--white);
-    padding: 13.5px 15px;
     border-radius: 15px;
     box-shadow: 0 4.01px 15.04px 0 #00000010;
     margin-top: 12px;
+    position: relative;
+    overflow: hidden;
     a {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         color: var(--black);
+        overflow: hidden;
+    }
+    &:hover .plate-card-infos__price {
+        transform: translateX(-70px);
+        transition: transform 0.5s ease;
+    }
+    &:hover .plate-card-infos__check {
+        right: 0;
+        opacity: 1;
+        transition: right 0.5s ease;
+    }
+    &:hover .plate-card-menu {
+        padding-right: 70px;
     }
 }
 
 .plate-card-menu {
+    padding: 13.5px 15px 13.5px 15px;
+    flex-grow: 1;
+    min-width: 0;
     &__title {
         font-family: var(--body-font);
         font-weight: var(--plate-title-font-weight);
         font-size: var(--body-highlight-font-size);
         line-height: 21px;
-        margin-bottom: 5px;;
+        margin-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__details {
         font-family: var(--body-font);
         font-weight: var(--body-font-weight);
         font-size: var(--details-font-size);
         line-height: 18px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
-.plate-card-price {
-    font-family: var(--body-font);
-    font-weight: var(--title-font-weight);
-    font-size: var(--details-font-size);
+.plate-card-infos {
     display: flex;
-    align-items: end;
+    flex-direction: row;
+    position: relative;
+    &__price {
+        font-family: var(--body-font);
+        font-weight: var(--title-font-weight);
+        font-size: var(--details-font-size);
+        display: flex;
+        align-items: end;
+        padding-right: 15px;
+        padding: 13.5px 15px;
+        transition: transform 0.5s ease;
+    }
+    &__check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: -70px;
+        width: 70px;
+        height: 100%;
+        border-radius: 0 15px 15px 0;
+        background-color: var(--light-green);
+        transition: right 0.5s ease;
+        opacity: 0;
+        &--icon {
+            color: var(--white);
+        }
+    }
+    &:hover &__check {
+        right: 0;
+        opacity: 1;
+    }
+    &:hover &__price {
+        transform: translateX(-70px);
+    }
+}
+
+/* smooth transition to original state */
+
+.plate-card-infos__check {
+    transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+.plate-card-infos__price {
+    transition: transform 0.5s ease;
 }
 
 .restaurant-order {
@@ -517,70 +609,4 @@ a {
     }
 }
 
-/* loader animation 
-
-.loader-container-display {
-    animation: DisplayNone 3s;
-}
-
-@keyframes DisplayNone {
-    100% {
-        display: none;
-    }
-}
-
-.loader-container {
-    position: fixed;
-    z-index: 3;
-    backdrop-filter: blur(10px) brightness(0.3);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 3s ease-in-out;
-    
-}
-
-.dot {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-    animation: loader infinite 0.3s alternate;
-}
-
-@keyframes loader {
-    100% {
-        transform: translateY(-30px);
-    }
-}
-
-*/
-
-/*
-
-.d1 {
-    background-color: var(--pink);
-}
-
-.d2 {
-    background-color: var(--purple);
-    animation-delay: 0.05s;
-}
-
-.d3 {
-    background-color: var(--light-green);
-    animation-delay: 0.1s;
-}
-
-*/
-
-@for $i from 1 through 3 {
-    .d#{$i} {
-        animation-delay: $i * 0.05s;
-        background-color: var(--pink);
-    }
-}
 

@@ -1,7 +1,16 @@
+
+
+/* Variables */
+$purple: #9356DC;
+$pink: #FF79DA;
+$btn-color: linear-gradient(0deg, var(--purple) 1%, var(--pink) 99%);
+$btn-color-light: linear-gradient(0deg, lighten($purple, 5%) 1%, lighten($pink, 5%) 99%);
+
+/* Mixin */
 @mixin cta-btn-main {
     line-height: 1.5rem;
     padding: 0.81rem 1.4rem;
-    background: linear-gradient(0deg, var(--purple) 1%, var(--pink) 99%);
+    background: $btn-color;
     color: var(--white);
     font-family: var(--button-font);
     font-weight: var(--button-font-weight);
@@ -11,4 +20,10 @@
     border-radius: 1.56rem;
     box-shadow: 0 4px 10px #00000025;
     border: none;
+    transition: transform 0.4s, box-shadow 0.4s;
+    &:hover {
+        transform: scale(1.1);
+        background: $btn-color-light;
+        box-shadow: 0 4px 20px #00000070;
+    }
 }
