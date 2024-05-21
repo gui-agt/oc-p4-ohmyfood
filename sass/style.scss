@@ -167,9 +167,11 @@ body {
     }
 }
 
+/*
 a {
     text-decoration: none;
 }
+*/
 
 .card {
     height: 250px;
@@ -367,12 +369,17 @@ a {
 }
 
 .plate-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: var(--white);
     border-radius: 15px;
     box-shadow: 0 4.01px 15.04px 0 #00000010;
     margin-top: 12px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    /*
     a {
         display: flex;
         flex-direction: row;
@@ -380,6 +387,7 @@ a {
         color: var(--black);
         overflow: hidden;
     }
+    */
     &:hover .plate-card-infos__price {
         transform: translateX(-70px);
         transition: transform 0.5s ease;

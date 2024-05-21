@@ -67,7 +67,7 @@ a {
   height: 100%;
   backdrop-filter: blur(10px) brightness(0.3);
   -webkit-backdrop-filter: blur(10px) brightness(0.3);
-  animation: fadeOut 2s forwards;
+  animation: fadeOut 3.2s forwards;
 }
 
 @keyframes fadeOut {
@@ -352,10 +352,11 @@ body {
   font-size: var(--section-title-font-size);
 }
 
+/*
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
-
+*/
 .card {
   height: 250px;
   border-radius: 15px;
@@ -544,19 +545,25 @@ a {
 }
 
 .plate-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: var(--white);
   border-radius: 15px;
   box-shadow: 0 4.01px 15.04px 0 rgba(0, 0, 0, 0.062745098);
   margin-top: 12px;
   position: relative;
   overflow: hidden;
-}
-.plate-card a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: var(--black);
-  overflow: hidden;
+  cursor: pointer;
+  /*
+  a {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      color: var(--black);
+      overflow: hidden;
+  }
+  */
 }
 .plate-card:hover .plate-card-infos__price {
   transform: translateX(-70px);
