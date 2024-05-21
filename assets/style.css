@@ -102,7 +102,20 @@ a {
   margin: 0 10px;
   animation: loader infinite 0.3s alternate;
 }
+@media screen and (max-width: 580px) {
+  .dot {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+  }
+}
 
+@media screen and (max-width: 580px) {
+  .dot {
+    width: 15px;
+    height: 15px;
+  }
+}
 @keyframes loader {
   100% {
     transform: translateY(-30px);
