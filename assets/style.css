@@ -170,7 +170,6 @@ a {
   animation: fadeIn 1s ease-in-out 2.8s forwards;
 }
 
-/* Slider */
 body {
   background-color: var(--white);
 }
@@ -203,23 +202,6 @@ body {
   height: 44px;
 }
 
-/* header old version 
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.94rem;
-    box-shadow: 0 2px 4px #00000026;
-    position: relative;
-    z-index: 2;
-    &__logo {
-        width: 10.125rem;
-        height: 2.75rem;
-    }
-}
-
-*/
 /* location */
 .location {
   height: 3.125rem;
@@ -365,11 +347,6 @@ body {
   font-size: var(--section-title-font-size);
 }
 
-/*
-a {
-    text-decoration: none;
-}
-*/
 .card {
   height: 250px;
   border-radius: 15px;
@@ -411,13 +388,6 @@ a {
   align-items: center;
   height: 67px;
   padding: 0 25px 0 15px;
-  /*
-      &__heart {
-          font-size: var(--section-title-font-size);
-          color: black;
-          cursor: pointer;
-      }
-      */
 }
 .card-content__text {
   display: flex;
@@ -568,15 +538,6 @@ a {
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  /*
-  a {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      color: var(--black);
-      overflow: hidden;
-  }
-  */
 }
 .plate-card:hover .plate-card-infos__price {
   transform: translateX(-70px);

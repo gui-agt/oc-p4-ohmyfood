@@ -16,24 +16,6 @@ body {
     @include global-header;
 }
 
-/* header old version 
-
-.header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3.94rem;
-    box-shadow: 0 2px 4px #00000026;
-    position: relative;
-    z-index: 2;
-    &__logo {
-        width: 10.125rem;
-        height: 2.75rem;
-    }
-}
-
-*/
-
 /* location */
 
 .location {
@@ -167,12 +149,6 @@ body {
     }
 }
 
-/*
-a {
-    text-decoration: none;
-}
-*/
-
 .card {
     height: 250px;
     border-radius: 15px;
@@ -231,13 +207,6 @@ a {
             color: black;
         }
     }
-/*
-    &__heart {
-        font-size: var(--section-title-font-size);
-        color: black;
-        cursor: pointer;
-    }
-    */
 }
 
 .heart-wrapper {
@@ -379,15 +348,7 @@ a {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    /*
-    a {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        color: var(--black);
-        overflow: hidden;
-    }
-    */
+    
     &:hover .plate-card-infos__price {
         transform: translateX(-70px);
         transition: transform 0.5s ease;
