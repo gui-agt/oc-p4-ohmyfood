@@ -19,18 +19,18 @@ body {
 /* location */
 
 .location {
-    height: 3.125rem;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.06rem;
+    gap: 17px;
     background-color: var(--dark-grey);
     box-shadow: 0 4px 4px #00000025;
     position: relative;
     z-index: 1;
     &__logo {
-        width: 0.75rem;
-        height: 1rem;
+        width: 12px;
+        height: 16px;
     }
     &__text {
         font-family: var(--body-font);
@@ -47,20 +47,20 @@ body {
     position: relative;
     z-index: 0;
     &__title {
-        height: 4.25rem;
+        height: 68px;
         font-family: var(--section-title-font);
         font-weight: var(--title-font-weight);
         font-size: var(--section-title-font-size); 
         text-align: center;
-        padding: 0 3.13rem;
+        padding: 0 50px;
     }
     &__text {
-        height: 2.88rem;
+        height: 46px;
         text-align: center;
         font-family: var(--body-font);
         font-weight: var(--body-font-weight);
         font-size: var(--body-highlight-font-size);
-        padding: 0 1.88rem 1.88rem 1.88rem;
+        padding: 0 30px 30px 30px;
     }
     a {
         text-decoration: none;
@@ -348,7 +348,7 @@ body {
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    
+
     &:hover .plate-card-infos__price {
         transform: translateX(-70px);
         transition: transform 0.5s ease;
@@ -448,7 +448,7 @@ body {
     background-color: var(--light-grey);
     &__button {
         @include cta-btn-main;
-        padding: 0.81rem 3rem;
+        padding: 13px 48px;
     }
 }
 
